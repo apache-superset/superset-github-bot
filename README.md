@@ -1,6 +1,6 @@
 # superset-github-bot
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app
+> A Github bot to automatically label issues and PRs, built with [Probot](https://github.com/probot/probot) that A Probot app
 
 ## Setup
 
@@ -12,12 +12,16 @@ npm install
 npm start
 ```
 
-## Contributing
+## Status
+Currently this is just boilerplate following https://probot.github.io/docs/development/
 
-If you have suggestions for how superset-github-bot could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
+## Resources
+* Bot page: https://github.com/settings/apps/superset-github-bot
+* Probot templates / examples: https://probot.github.io/apps/
+* Issue labeller: https://github.com/riyadhalnur/issuelabeler
 
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
-
-## License
-
-[ISC](LICENSE) © 2019 Maxime Beauchemin <maximebeauchemin@gmail.com>
+Goals:
+* auto label organization based on issue/PR creator
+* trigger Preset builds on build-related emojis 
+* allow PMs to label things with mini language (`{label-emoji}{label}`)
+* ...
