@@ -13,15 +13,11 @@ npm start
 ```
 
 ## Status
-Currently this is just boilerplate following https://probot.github.io/docs/development/
+* auto assigns public org labels that are whitelisted
+* can add a label with `🏷mylabel`
+* can remove a label with `🗑🏷mylabel`
 
 ## Resources
 * Bot page: https://github.com/settings/apps/superset-github-bot
 * Probot templates / examples: https://probot.github.io/apps/
 * Issue labeller: https://github.com/riyadhalnur/issuelabeler
-
-Goals:
-* auto label organization based on issue/PR creator
-* trigger Preset builds on build-related emojis 
-* allow PMs to label things with mini language (`{label-emoji}{label}`)
-* ...
