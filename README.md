@@ -26,8 +26,7 @@ npm run dev
 
 ## Deploy
 
-The bot lives
-[here](https://glitch.com/edit/#!/apache-superset-superset-github-bot-1?path=.env:5:0)
-on Glitch and has been deployed following 
-[this documentation](https://probot.github.io/docs/deployment/#glitch)
-
+The bot lives on Heroku for now:
+* app page: https://dashboard.heroku.com/apps/damp-spire-74868
+* https://damp-spire-74868.herokuapp.com/probot
+* [deploy info](https://probot.github.io/docs/deployment/)
