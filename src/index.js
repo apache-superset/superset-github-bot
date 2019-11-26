@@ -22,7 +22,7 @@ async function emojiLabel(context) {
       const label = match[1].trim();
       const isValidTag = label.match(/^[a-z0-9-\.]+$/i);
       if (isValidTag) {
-        if (comment.includes('🗑 🏷 ')) {
+        if (comment.match('🗑 *🏷')) {
           return context.github.issues.removeLabel(
             context.issue({ issue_number: issueCtx.number, name: label }));
         }
