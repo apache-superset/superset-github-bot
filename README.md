@@ -15,9 +15,11 @@ npm run dev
 ```
 
 ## Current actions
-* auto assigns public org labels that are whitelisted in `src/config.js`
-* can add a label with `🏷mylabel`
-* can remove a label with `🗑🏷mylabel`
+* auto assigns organization as a label
+  * orgs have to be whitelisted in `src/config.js`
+  * affiliation to org has to be public, [here's how to set this up](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/publicizing-or-hiding-organization-membership)
+* can add a label with a comment that contains `🏷mylabel`
+* can remove a label with a comment that contains `🗑🏷mylabel`
 
 ## Resources
 * Bot page: https://github.com/settings/apps/superset-github-bot
