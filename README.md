@@ -26,9 +26,25 @@ npm run dev
 * Probot templates / examples: https://probot.github.io/apps/
 * Issue labeller: https://github.com/riyadhalnur/issuelabeler
 
+## To develop / test
+To avoid conflicting with the production bot, you'll need to create your
+own Github app following the
+[Probot instructions](https://probot.github.io/docs/development/).
+This creates both a brand new Probot using a template
+and a new Github app on your
+behalf using the "Register Github App" flow. This will generate a `.env` file
+that contains secrets. Moving this file over to the `github-superset-bot` will
+effectively bind your new app to the existing Probot. You'll then have to
+register your app against a repo of your choice to test things out.
+Once you run `npm run dev`, you should start seeing events firing in your bot.
+
+
 ## Deploy
 
 The bot lives on Heroku for now:
-* app page: https://dashboard.heroku.com/apps/damp-spire-74868
-* https://damp-spire-74868.herokuapp.com/probot
-* [deploy info](https://probot.github.io/docs/deployment/)
+* you'll need an Heroku account and ask the mailing list to get your
+  account added [here](https://dashboard.heroku.com/apps/damp-spire-74868/access) (only for committers)
+* you need the right Heroku git remote `git remote add heroku https://git.heroku.com/damp-spire-74868.git`
+* app page is here: https://dashboard.heroku.com/apps/damp-spire-74868
+* app is served here: https://damp-spire-74868.herokuapp.com/probot
+* [Probot deploy docs](https://probot.github.io/docs/deployment/)
