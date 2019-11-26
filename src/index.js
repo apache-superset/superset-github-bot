@@ -58,3 +58,15 @@ module.exports = app => {
   });
 
 }
+
+if (conf.HEROKU_APP_NAME) {
+  const http = require("http");
+  setInterval(() => {
+    console.log('WAKE UP HEROKU!');
+    try {
+      http.get(`http://${conf.HEROKU_APP_NAME}.herokuapp.com`);
+    } catch(e) {
+      console.error('HTTP get failed...');
+    }
+  }, conf.HEROKU_WAKEUP_FREQUENCY);
+}
