@@ -2,7 +2,8 @@ const conf = require('./config.js');
 
 async function assignOrgLabel(context, conf) {
   const G = context.github;
-  const username = context.payload.issue.user.login;
+  const issueOrPR = context.payload.issue || context.payload.pull_request;
+  const username = issueOrPR.user.login;
   const orgs = await G.orgs.listForUser({ username });
   const orgNames = orgs.data.map(v => v.login);
   const issueCtx = context.issue();
