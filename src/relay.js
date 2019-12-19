@@ -7,7 +7,7 @@ const conf = confRoot.relay
 const axios = require('axios')
 
 module.exports = app => {
-  ['issues', 'issue_comment', 'label', 'pull_request', 'push'].forEach(eventType => {
+  ['issues', 'issue_comment', 'label', 'pull_request', 'pull_request_review', 'pull_request_review_comment', 'push'].forEach(eventType => {
     app.on(eventType, async context => {
       return Promise.all(
         conf.WEBHOOKS.map(url => {
