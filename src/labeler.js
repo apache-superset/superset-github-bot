@@ -1,4 +1,6 @@
-const conf = require('./config.js');
+const confRoot = require('./config.js');
+const conf = confRoot.labeler
+const http = require('http');
 
 async function assignOrgLabel(context, conf) {
   const G = context.github;
@@ -60,13 +62,14 @@ module.exports = app => {
 
 }
 
+// Heroku app needs to be woken up periodically to prevent it to go to sleep
+// https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/
 if (conf.HEROKU_APP_NAME) {
-  const http = require("http");
   setInterval(() => {
     console.log('WAKE UP HEROKU!');
     try {
       http.get(`http://${conf.HEROKU_APP_NAME}.herokuapp.com`);
-    } catch(e) {
+    } catch (e) {
       console.error('HTTP get failed...');
     }
   }, conf.HEROKU_WAKEUP_FREQUENCY);
