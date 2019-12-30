@@ -5,4 +5,4 @@ labeler:
     - preset-io
 relay:
   WEBHOOKS:
-    - https://my.webhookrelay.com/v1/webhooks/ef7bcd96-42d9-44e7-8644-4118c100eaeb
+    - https://my.webhookrelay.com/v1/webhooks/03616b64-394a-42ab-ad93-baa8622df186
