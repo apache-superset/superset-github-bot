@@ -16,8 +16,6 @@ async function assignOrgLabel(context, conf) {
 }
 async function emojiLabel(context) {
   const issueCtx = context.issue();
-  const issue = await context.github.issues.get(
-    context.issue({ issue_number: context.payload.issue.number }));
   const comment = context.payload.comment.body.toLowerCase();
   if (context.payload.comment.user.type != "Bot") {
     const match = comment.match(/🏷(.*)(\n|$)/);
