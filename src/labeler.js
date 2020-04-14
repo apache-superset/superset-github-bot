@@ -20,9 +20,10 @@ async function emojiLabel(context) {
   if (context.payload.comment.user.type != "Bot") {
     const match = comment.match(/🏷(.*)(\n|$)/);
     if (match) {
-      console.log(`[issue #${issueCtx.number}]Label comment detected: ${comment}`);
+      console.log(`[issue #${issueCtx.number}] label comment detected: ${comment}`);
+      console.log(`label: "${label}"`);
       const label = match[1].trim();
-      const isValidTag = label.match(/^[a-z0-9-\.]+$/i);
+      const isValidTag = label.match(/^[#a-z0-9\.]+$/i);
       if (isValidTag) {
         if (comment.match('🗑 *🏷')) {
           console.log(`Removing label: ${label}`);
