@@ -38,6 +38,9 @@ effectively bind your new app to the existing Probot. You'll then have to
 register your app against a repo of your choice to test things out.
 Once you run `npm run dev`, you should start seeing events firing in your bot.
 
+**Note:** Be sure to create a private key, as described in the probot docs, otherwise 
+Probot will silently ignore your app!!
+
 
 ## Deploy
 

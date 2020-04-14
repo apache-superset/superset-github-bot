@@ -1,0 +1,8 @@
+labeler:
+  HEROKU_APP_NAME: damp-spire-74868 # Set to falsy to stop pings
+  HEROKU_WAKEUP_FREQUENCY: 300000 # every 5 min
+  ORG_WHITELIST:
+    - preset-io
+relay:
+  WEBHOOKS:
+    - https://my.webhookrelay.com/v1/webhooks/03616b64-394a-42ab-ad93-baa8622df186
