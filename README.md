@@ -46,9 +46,9 @@ Probot will silently ignore your app!!
 
 The bot lives on Heroku for now:
 * you'll need an Heroku account and ask the mailing list to get your
-  account added [here](https://dashboard.heroku.com/apps/damp-spire-74868/access) (only for committers)
+  account added [here](https://dashboard.heroku.com/apps/superset-github-bot/access) (only for committers)
 * you need the right Heroku git remote `git remote add heroku https://git.heroku.com/damp-spire-74868.git`
 * to deploy, `git push heroku master`
-* app page is here: https://dashboard.heroku.com/apps/damp-spire-74868
-* app is served here: https://damp-spire-74868.herokuapp.com/probot
+* app page is here: https://dashboard.heroku.com/apps/superset-github-bot
+* app is served here: https://superset-github-bot.herokuapp.com/probot
 * [Probot deploy docs](https://probot.github.io/docs/deployment/)
