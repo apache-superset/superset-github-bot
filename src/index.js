@@ -17,14 +17,14 @@ async function emojiLabel(context) {
   const comment = context.payload.comment.body.toLowerCase();
   console.log(`Looking for labels in comment: "${comment}"`);
   if (context.payload.comment.user.type != "Bot") {
-    const match = comment.match(/🏷\s+(.*)\s+(\n|$)/);
+    const match = comment.match(/🏷\s*(\S+)\s*(\n|$)/).replace(/\s+/g, '');
     if (match) {
       const label = match[1].trim();
       console.log(`Found label: "${label}"`);
-      const isValidTag = label.match(/^[a-z0-9-\.]+$/i);
+      const isValidTag = label.match(/^([a-z0-9-\.:]+)$/i);
       if (isValidTag) {
         console.log(`Label is valid!`);
-        if (comment.match('🗑\s+🏷')) {
+        if (comment.match('🗑\s*🏷')) {
           console.log(`Removing label`);
           return context.github.issues.removeLabel(
             context.issue({ issue_number: issueCtx.number, name: label }));
@@ -34,6 +34,8 @@ async function emojiLabel(context) {
           return context.github.issues.addLabels(
             context.issue({ issue_number: issueCtx.number, labels: [label] }));
         }
+      } else {
+        console.log("Label is not valid");
       }
     }
   }
