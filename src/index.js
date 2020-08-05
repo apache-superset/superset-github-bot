@@ -14,8 +14,8 @@ async function assignOrgLabel(context, conf) {
 }
 async function emojiLabel(context) {
   const issueCtx = context.issue();
-
   const comment = context.payload.comment.body.toLowerCase();
+  console.log(`Looking for labels in comment: "${comment}"`);
   if (context.payload.comment.user.type != "Bot") {
     const match = comment.match(/🏷\s+(.*)\s+(\n|$)/);
     if (match) {
