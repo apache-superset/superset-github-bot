@@ -1,4 +1,4 @@
-exports.ORG_WHITELIST = ['preset-io', 'polidea', 'airbnb', 'dropbox', 'lyft'];
+exports.ORG_WHITELIST = ['preset-io', 'Polidea', 'polidea', 'airbnb', 'dropbox', 'lyft'];
 
 // Heroku app needs to be woken up periodically to prevent it to go to sleep
 // https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/
