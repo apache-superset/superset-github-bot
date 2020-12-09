@@ -7,7 +7,23 @@ async function assignOrgLabel(context, conf) {
   const orgs = await G.orgs.listForUser({ username });
   const orgNames = orgs.data.map(v => v.login);
   const issueCtx = context.issue();
-  orgNames.filter(org => conf.ORG_WHITELIST.includes(org)).forEach(org => {
+  // get list of matching github orgs
+  let matchingOrgs = orgNames.filter(org => conf.ORG_WHITELIST.includes(org));
+  // append user-based orgs from list
+  if(conf.USER_ORG_XREF[username]){
+    matchingOrgs.push(conf.USER_ORG_XREF[username])
+  }
+  // look up org groups, add 'em in!
+  const orgGroups = []
+  matchingOrgs.forEach(org => {
+    if(conf.ORG_GROUPS[org]){
+      orgGroups.push(conf.ORG_GROUPS[org])
+    }
+  });
+  matchingOrgs.concat(orgGroups);
+  // dedupe, just in case
+  matchingOrgs = new Set(matchingOrgs);
+  matchingOrgs.forEach(org => {
     return G.issues.addLabels(
       context.issue({ issue_number: issueCtx.number, labels: [org] }));
   });
