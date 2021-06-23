@@ -3,7 +3,10 @@ exports.USER_ORG_XREF = {
   'michael-s-molina': 'Turing',
   maloun96: 'Flexiana',
   geido: 'Flexiana',
-  nikolagigic: 'Flexiana'
+  nikolagigic: 'Flexiana',
+  'jinghua-qa': 'Preset-QA',
+  'rosemarie-chiu': 'Preset-QA',
+  'adam-stasiak': 'Preset-QA'
 };
 exports.ORG_GROUPS = {
   Flexiana: 'preset-ext',
