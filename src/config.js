@@ -17,3 +17,12 @@ exports.ORG_GROUPS = {
 // https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/
 exports.HEROKU_APP_NAME = 'damp-spire-74868'; // Set to falsy to stop pings
 exports.HEROKU_WAKEUP_FREQUENCY = 300000; // every 5 minutes
+
+
+// assign people from the committer/PMC list randomly to new issues.
+// current list (without handles... sigh) can be found here: 
+// https://home.apache.org/phonebook.html?unix=superset
+exports.ISSUE_VOLUNTEERS = [
+  'rusackas',
+  'betodealmeida'
+]
