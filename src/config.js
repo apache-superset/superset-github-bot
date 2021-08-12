@@ -1,9 +1,6 @@
 exports.ORG_WHITELIST = ['preset-io', 'Polidea', 'polidea', 'airbnb', 'dropbox', 'lyft', 'Flexiana', 'Turing'];
 exports.USER_ORG_XREF = {
-  'michael-s-molina': 'Turing',
-  maloun96: 'Flexiana',
   geido: 'Flexiana',
-  nikolagigic: 'Flexiana',
   'jinghua-qa': 'Preset-QA',
   'rosemarie-chiu': 'Preset-QA',
   'adam-stasiak': 'Preset-QA'
