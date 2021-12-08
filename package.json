@@ -16,24 +16,25 @@
   "scripts": {
     "dev": "nodemon",
     "start": "probot run ./src/index.js",
-    "lint": "standard --fix",
-    "test": "jest && standard",
+    "lint": "semistandard --fix",
+    "test": "jest && semistandard",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {
-    "probot": "^9.6.4",
+    "probot": "^9.13.0",
     "smee-client": "^1.1.0"
   },
   "devDependencies": {
     "jest": "^24.9.0",
     "nock": "^11.4.0",
     "nodemon": "^1.19.4",
-    "standard": "^14.3.1"
+    "semistandard": "^16.0.0",
+    "standard": "^16.0.3"
   },
   "engines": {
     "node": ">= 8.3.0"
   },
-  "standard": {
+  "semistandard": {
     "env": [
       "jest"
     ]

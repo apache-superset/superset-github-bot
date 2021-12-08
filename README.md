@@ -38,14 +38,36 @@ effectively bind your new app to the existing Probot. You'll then have to
 register your app against a repo of your choice to test things out.
 Once you run `npm run dev`, you should start seeing events firing in your bot.
 
+**Note:** Be sure to create a private key, as described in the probot docs, otherwise 
+Probot will silently ignore your app!!
+
 
 ## Deploy
 
-The bot lives on Heroku for now:
-* you'll need an Heroku account and ask the mailing list to get your
-  account added [here](https://dashboard.heroku.com/apps/damp-spire-74868/access) (only for committers)
-* you need the right Heroku git remote `git remote add heroku https://git.heroku.com/damp-spire-74868.git`
-* to deploy, `git push heroku master`
-* app page is here: https://dashboard.heroku.com/apps/damp-spire-74868
-* app is served here: https://damp-spire-74868.herokuapp.com/probot
+### The bot lives on Heroku for now:
+1. you'll need an Heroku account and ask the mailing list to get your
+    account added [here](https://dashboard.heroku.com/apps/superset-github-bot/access) (only for committers)
+
+1. Grab the Heroku CLI
+   ```bash
+   $ brew tap heroku/brew
+   $ brew install heroku
+   ```
+   
+1. Login to Heroku
+    ```bash
+   $ heroku login 
+   ```
+
+1. Add the Heroku remote
+    ```bash
+   $ git remote add heroku https://git.heroku.com/superset-github-bot.git 
+   ```
+1. To deploy -
+   ```bash
+   $ git push heroku master
+   ```
+
+* app page is here: https://dashboard.heroku.com/apps/superset-github-bot
+* app is served here: https://superset-github-bot.herokuapp.com/probot
 * [Probot deploy docs](https://probot.github.io/docs/deployment/)
