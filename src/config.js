@@ -1,7 +1,5 @@
 exports.ORG_WHITELIST = [
   "preset-io",
-  "Polidea",
-  "polidea",
   "airbnb",
   "dropbox",
   "lyft",
@@ -10,7 +8,6 @@ exports.ORG_WHITELIST = [
   "Superset-Community-Partners",
 ];
 exports.USER_ORG_XREF = {
-  geido: "Flexiana",
   "jinghua-qa": "Preset-QA",
   "rosemarie-chiu": "Preset-QA",
   "adam-stasiak": "Preset-QA",
