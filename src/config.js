@@ -15,7 +15,6 @@ exports.USER_ORG_XREF = {
 exports.ORG_GROUPS = {
   Flexiana: "preset-ext",
   Turing: "preset-ext",
-  Polidea: "preset-ext",
 };
 // Heroku app needs to be woken up periodically to prevent it to go to sleep
 // https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/
