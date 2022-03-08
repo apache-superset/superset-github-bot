@@ -11,6 +11,9 @@ exports.USER_ORG_XREF = {
   "jinghua-qa": "Preset-QA",
   "rosemarie-chiu": "Preset-QA",
   "adam-stasiak": "Preset-QA",
+  "prosdev0107": "Preset-Patch",
+  "diegomedina248": "Preset-Patch",
+  "codemaster08240328": "Preset-Patch",
 };
 exports.ORG_GROUPS = {
   Flexiana: "preset-ext",
