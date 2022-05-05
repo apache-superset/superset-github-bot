@@ -3,7 +3,6 @@ exports.ORG_WHITELIST = [
   "airbnb",
   "dropbox",
   "lyft",
-  "Flexiana",
   "Turing",
   "Superset-Community-Partners",
 ];
@@ -14,9 +13,9 @@ exports.USER_ORG_XREF = {
   "prosdev0107": "Preset-Patch",
   "diegomedina248": "Preset-Patch",
   "codemaster08240328": "Preset-Patch",
+  "Gwitchr": "Preset-Patch",
 };
 exports.ORG_GROUPS = {
-  Flexiana: "preset-ext",
   Turing: "preset-ext",
 };
 // Heroku app needs to be woken up periodically to prevent it to go to sleep
