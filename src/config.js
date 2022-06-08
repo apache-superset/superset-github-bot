@@ -13,7 +13,7 @@ exports.USER_ORG_XREF = {
   "prosdev0107": "Preset-Patch",
   "diegomedina248": "Preset-Patch",
   "codemaster08240328": "Preset-Patch",
-  "Gwitchr": "Preset-Patch",
+  "stephenLYZ": "Preset-Patch",
 };
 exports.ORG_GROUPS = {
   Turing: "preset-ext",
