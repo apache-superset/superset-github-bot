@@ -5,6 +5,7 @@ exports.ORG_WHITELIST = [
   "lyft",
   "Turing",
   "Superset-Community-Partners",
+  "CybercentreCanada"
 ];
 exports.USER_ORG_XREF = {
   "jinghua-qa": "Preset-QA",
