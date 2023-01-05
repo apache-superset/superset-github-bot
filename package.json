@@ -29,7 +29,7 @@
     "nock": "^11.4.0",
     "nodemon": "^1.19.4",
     "semistandard": "^16.0.0",
-    "standard": "^16.0.3"
+    "standard": "^16.0.4"
   },
   "engines": {
     "node": "8.11.0"
